@@ -30,6 +30,7 @@ function App() {
   }
   return (
     <div className="w-screen h-screen bg-gradient ">
+      <p className="text-3xl text-center font-semibold py-2">Welcome to Weather App</p>
       <Search
         location={location}
         setLocation={setLocation}
