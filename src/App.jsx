@@ -1,5 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
+import Search from "./components/Search";
+import Weather from "./components/Weather";
 
 function App() {
   const [data, setData] = useState({});
@@ -7,14 +9,15 @@ function App() {
 
 
   const searchLocation = (event) => {
-    if(event.key === "Enter") {
+    if (event.key === "Enter") {
       if (!location.trim()) {
         return;
       }
       console.log("Location:", location);
-      
+
       // console.log("URL:", url);
-      axios.get(url)
+      axios
+        .get(url)
         .then((res) => {
           setData(res.data)
           console.log(res.data)
@@ -22,25 +25,18 @@ function App() {
         .catch(error => {
           console.error('Error fetching weather data:', error);
         });
-        setLocation("")
+      setLocation("")
     }
   }
   return (
-    <div className="w-full h-full relative">
-      <div className="text-center p-4">
-        <input
-          type="text"
-          className="py-2 px-3 w-[700px] text-lg rounded-3xl
-           border border-gray-200 text-gray-600 placeholder:text-gray-400
-           focus:outline-none bg-white-600/100 shadow-md "
-          placeholder="Enter Location"
-          value={location}
-          onChange={(event) => setLocation(event.target.value)}
-          onKeyDownCapture={searchLocation}
-        />
-      </div>
+    <div className="w-screen h-screen bg-gradient ">
+      <Search
+        location={location}
+        setLocation={setLocation}
+        searchLocation={searchLocation}
+      />
+      <Weather weatherData={data} />
     </div>
-
 
   )
 }
