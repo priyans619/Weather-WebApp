@@ -26,6 +26,12 @@ const Weather = ({ weatherData }) => {
                 </div>
               </div>
             </div>
+
+            <div className="w-1/2 flex flex-col justify-between items-end">
+                <div className="relative">
+                  <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="" className='w-[120px]' />
+                </div>
+            </div>
           </div>
 
         </div>
