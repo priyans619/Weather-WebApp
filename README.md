@@ -8,11 +8,11 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 2.**API**'s:
 
-   a) Use ***OpenweatherAPI*** (The Database) is application ineterface used to fetch weather details.
+   a) Use **OpenweatherAPI** (The Database) is application interface used to fetch weather details.
 
 3.**Libraries**:
     
-   a) **UI kit**- **TailwindCSS* (For styling)
+   a) **UI kit**- **TailwindCSS** (For styling)
 
   
  ## System Requirements
