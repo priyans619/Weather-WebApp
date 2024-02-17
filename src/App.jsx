@@ -8,6 +8,12 @@ function App() {
 
   const searchLocation = (event) => {
     if(event.key === "Enter") {
+      if (!location.trim()) {
+        return;
+      }
+      console.log("Location:", location);
+      
+      // console.log("URL:", url);
       axios.get(url)
         .then((res) => {
           setData(res.data)
