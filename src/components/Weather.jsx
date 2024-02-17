@@ -3,10 +3,9 @@ import React from 'react'
 const Weather = ({ weatherData }) => {
 
   return (
-    <div className=''>
+    <div className="max-w-lg md:mx-auto bg-blue-300 shadow-lg rounded-xl p-6 mt-8 mx-4">
       {weatherData.weather ? (
-        <div className="w-[500px] h-[250px] bg-blue-300 shadow-lg rounded-xl m-auto
-         relative px-8 top-[10%]">
+        
           <div className="flex justify-between w-full">
             <div className="w-1/2 my-4 mx-auto flex justify-between items-center">
               <div className="flex- flex-col items-start justify-between h-full">
@@ -62,8 +61,6 @@ const Weather = ({ weatherData }) => {
                 ): null}
             </div>
           </div>
-
-        </div>
       ) : null}
     </div>
   )
