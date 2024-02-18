@@ -1,6 +1,5 @@
 import React from 'react'
 import Clear from '../assets/Clear.png';
-import Clear1 from '../assets/Clear1.png';
 import Cloudy from '../assets/Cloudy.png';
 import Rain from '../assets/Rain.png';
 import Haze from '../assets/Haze.png';
@@ -28,7 +27,7 @@ const Weather = ({ weatherData }) => {
   };
 
   return (
-    <div className="max-w-lg sm:mx-auto bg-blue-300 shadow-lg rounded-xl p-6 mt-8 mx-4 bg-cover bg-no-repeat" style={{ backgroundImage: getBackgroundImage() }} >
+    <div className="max-w-lg sm:mx-auto bg-gradient shadow-lg rounded-xl p-6 mt-8 mx-4 bg-cover bg-no-repeat" style={{ backgroundImage: getBackgroundImage() }} >
       {weatherData.weather ? (
 
         <div className="flex justify-between w-full">
