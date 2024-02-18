@@ -1,5 +1,6 @@
 import React from 'react'
 import Clear from '../assets/Clear.png';
+import Clear1 from '../assets/Clear1.png';
 import Cloudy from '../assets/Cloudy.png';
 import Rain from '../assets/Rain.png';
 import Haze from '../assets/Haze.png';
