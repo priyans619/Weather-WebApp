@@ -34,16 +34,16 @@ const Weather = ({ weatherData }) => {
           <div className="w-1/2 my-4 mx-auto flex justify-between items-center">
             <div className="flex- flex-col items-start justify-between text h-full">
               <div>
-                <p className='text-xl'>
+                <p className='text-xl font-semibold'>
                   {weatherData.name},
                   {weatherData.sys.country}
                 </p>
-                <p className='text-sm'>
+                <p className='text-sm font-semibold text-white'>
                   {weatherData.weather[0].description}
                 </p>
               </div>
               <div>
-                <h1 className='text-white text-6xl font-semibold'>
+                <h1 className='text-blue-400 text-6xl font-semibold'>
                   {weatherData.main.temp.toFixed()} °C
                 </h1>
               </div>
@@ -56,7 +56,7 @@ const Weather = ({ weatherData }) => {
             </div>
 
             {weatherData.name !== undefined ? (
-              <div className="flex flex-col justify-evenly text-white gap-y-2 my-4 mx-auto text-xs">
+              <div className="flex flex-col justify-evenly text-white gap-y-2 my-4 mx-auto sm:text-xs">
                 <div className="flex justify-between gap-x-8">
                   <p>Feels Like</p>
                   <p className='font-bold w-20'>
